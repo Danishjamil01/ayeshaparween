@@ -1,0 +1,39 @@
+#products {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .product-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .product-item {
+    min-width: 200px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+  }
+  
+  .product-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-item p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  .product-item a {
+    background-color: #2eb8b8;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .product-item a:hover {
+    background-color: #005f5f;
+  }
+  

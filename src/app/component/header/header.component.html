@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg header" [ngClass]="{'scrolled': isScrolled}">
+  <div class="container-fluid">
+    <a class="navbar-brand"><img src="../../../assets/images/logo3.png" alt=""></a>
+    <i class="fi fi-bs-bars-sort" style="color: #fff;font-size: 25px;" (click)="openSidebar()"></i>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item" (click)="routeTo('home')">
+          <a class="nav-link">Home</a>
+        </li>
+        <li class="nav-item" (click)="routeTo('about')">
+          <a class="nav-link">About</a>
+        </li>
+        <li class="nav-item" (click)="routeTo('portfolio')">
+          <a class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item" (click)="routeTo('services')">
+          <a class="nav-link">Services</a>
+        </li>
+        <li class="nav-item" (click)="routeTo('blog')">
+          <a class="nav-link">Blog</a>
+        </li>
+        <li class="nav-item" (click)="routeTo('testimonial')">
+          <a class="nav-link">Testimonial</a>
+        </li>
+        <li class="nav-item" (click)="routeTo('contact')">
+          <a class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<!-- sidebar -->
+<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="sidebar"
+  aria-labelledby="staticBackdropLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" (click)="closeSidebar()"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav mb-2 mb-lg-0 p-3">
+
+      <li class="nav-item" (click)="routeTo('home')">
+        <a class="nav-link">Home</a>
+      </li>
+      <li class="nav-item" (click)="routeTo('home')">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item" (click)="routeTo('portfolio')">
+        <a class="nav-link">Portfolio</a>
+      </li>
+      <li class="nav-item" (click)="routeTo('services')">
+        <a class="nav-link">Services</a>
+      </li>
+      <li class="nav-item" (click)="routeTo('blog')">
+        <a class="nav-link">Blog</a>
+      </li>
+      <li class="nav-item" (click)="routeTo('testimonial')">
+        <a class="nav-link">Testimonial</a>
+      </li>
+      <li class="nav-item" (click)="routeTo('contact')">
+        <a class="nav-link">Contact</a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+<!-- sidebar -->

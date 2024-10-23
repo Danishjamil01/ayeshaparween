@@ -1,0 +1,70 @@
+<section id="hero" class="hero-section">
+  <video src="../../../assets/videos/header_background_video.mp4" loop autoplay muted playsinline preload="auto">
+  </video>
+  <div class="contact-us">
+    <h1>Contact us</h1>
+    <p>We would love to hear from you.</p>
+    <!-- <p class="kalamm">Please fill out the form below:</p> -->
+  </div>
+</section>
+
+
+<div class="contact-page container mt-5">
+  <div class="row">
+    <div class="col-sm-6 ">
+      <div class="pr-4" style="padding-right: 18px;">
+        <img src="../../../assets/images/contact.png" alt="" style="width: 100%;border-radius: 25px;">
+      </div>
+    </div>
+    <div class="col-sm-6 mt-5">
+      <h1 class="popins" style="font-size: 35px;font-weight: 600;">Send us a message</h1>
+      <p style="font-size: 17px;color: #5a5a5a;" class="popins mt-4">Your satisfaction is our top priority,and we are commited to providing
+        exeptional service and support.</p>
+      <form #contactForm="ngForm" class="mt-4">
+        <div class="form-group mt-3">
+          <label for="name">Your Name <span>*</span></label>
+          <input type="text" id="name" required ngModel name="name" placeholder="Name" />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="email">Email <span>*</span></label>
+          <input type="email" id="email" required ngModel name="email" placeholder="Email" />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="email">Phone Number <span>*</span></label>
+          <input type="number" id="number" required ngModel name="email" placeholder="Phone Number" />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="message">Description <span>*</span></label>
+          <textarea id="message" required ngModel name="message" placeholder="Message"></textarea>
+        </div>
+
+        <div class="submit-btn mt-3">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="another-contact mt-4">
+    <div class="container contact-container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3" *ngFor="let contact of contactItems">
+          <div class="contact-item text-center">
+            <div class="icon-container" [ngStyle]="{ 'background-color': contact.bg }">
+              <i [class]="contact.icon" [ngStyle]="{'color': contact.color}" style="font-size: 20px;"></i>
+            </div>
+            <h4>{{ contact.title }}</h4>
+            <p>{{ contact.description }}</p>
+            <p *ngIf="contact.link"><a [href]="contact.link">{{ contact.linkText }}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+</div>

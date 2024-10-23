@@ -1,0 +1,61 @@
+.navbar {
+    z-index: 999;
+    padding: 10px 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+
+    .navbar-brand {
+        img {
+            width: 75px;
+        }
+    }
+
+    .navbar-collapse {
+        ul {
+            gap: 30px;
+            margin-left: auto;
+
+            li {
+                a {
+                    color: #fff;
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 16px;
+                    transition: .3s;
+                }
+
+                & :hover {
+                    color: #3eba79;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}
+
+.fi-bs-bars-sort {
+    display: none;
+}
+
+.offcanvas{
+    width: 80%;
+}
+
+.scrolled {
+    background-color: #124229;
+    /* New background color when scrolled */
+}
+
+@media(max-width:768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .fi-bs-bars-sort {
+        display: block;
+    }
+}

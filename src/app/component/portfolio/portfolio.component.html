@@ -1,0 +1,111 @@
+<section class="main"
+  style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../../../assets/images/portfolio_bg.jpg');height: 65vh;background-size: cover;display: flex;align-items: center;justify-content: center;color: #fff;background-repeat: no-repeat;">
+  <div>
+    <h2 style="font-size:58px;text-transform: capitalize;">Portfolio</h2>
+    <p class="popins" style="font-size: 15px;font-weight: 300;text-align: center;">Home/Portfolio</p>
+  </div>
+</section>
+
+
+
+<div class="container work" style="padding-top: 60px;">
+  <h3 class="popins text-center">Some Of My Recent Works</h3>
+
+  <!-- Filter Tabs -->
+  <div class="filters mt-5">
+    <span [class.active]="selectedCategory === 'All'" (click)="filterWorks('All')">All</span>
+    <span [class.active]="selectedCategory === 'Digital Creator'" (click)="filterWorks('Digital Creator')">Digital
+      Creator</span>
+    <span [class.active]="selectedCategory === 'Content Creation'" (click)="filterWorks('Content Creation')">Content
+      Creation</span>
+    <span [class.active]="selectedCategory === 'Graphic Design'" (click)="filterWorks('Graphic Design')">Graphic
+      Design</span>
+  </div>
+  <!-- Portfolio Grid -->
+  <div class="portfolio-grid">
+    <div class="portfolio-item" *ngFor="let work of filteredWorks">
+      <img [src]="work.image" alt="{{ work.title }}" style="width: 100%;height: 100%;">
+    </div>
+  </div>
+
+  <!-- <div class="photo-gallery" style="display: flex;gap: 20px;">
+    <div class="coluumn">
+      <div class="photo">
+        <img src="assets/images/portfolio/digitalcreator/1.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/digitalcreator/2.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/digitalcreator/3.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/digitalcreator/4.webp" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/digitalcreator/5.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/digitalcreator/6.avif" alt="">
+      </div>
+
+
+    </div>
+    <div class="coluumn">
+      <div class="photo">
+        <img src="assets/images/portfolio/graphicdesign/1.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/graphicdesign/2.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/graphicdesign/3.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/graphicdesign/4.avif" alt="">
+      </div>
+    </div>
+
+    <div class="coluumn">
+      <div class="photo">
+        <img src="assets/images/portfolio/contentcreation/1.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/contentcreation/2.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/contentcreation/3.avif" alt="">
+      </div>
+      <div class="photo">
+        <img src="assets/images/portfolio/contentcreation/4.avif" alt="">
+      </div>
+    </div>
+  </div> -->
+
+</div>
+
+
+
+<div class="container education mt-5">
+  <!-- Education Section -->
+  <div class="qualification">
+    <h2>Qualification</h2>
+    <h3>My Education</h3>
+    <div class="education-item" *ngFor="let edu of education">
+      <h4>{{ edu.institution }} <span>({{ edu.years }})</span></h4>
+      <p>{{ edu.description }}</p>
+      <a class="badge">{{ edu.course }}</a>
+    </div>
+  </div>
+
+  <!-- Work Experience Section -->
+  <div class="work-experience">
+    <h2>Work Experience</h2>
+    <h3>My Awesome Experience</h3>
+    <div class="experience-item" *ngFor="let exp of experiences">
+      <h4>{{ exp.company }} <span>({{ exp.years }})</span></h4>
+      <p>{{ exp.description }}</p>
+      <a class="badge">{{ exp.role }}</a>
+    </div>
+  </div>
+</div>

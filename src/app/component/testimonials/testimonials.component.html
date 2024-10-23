@@ -1,0 +1,96 @@
+<section class="main"
+  style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://plus.unsplash.com/premium_photo-1661775756810-82dbd209fc95?q=80&w=1654&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');height: 65vh;background-size: cover;display: flex;align-items: center;justify-content: center;color: #fff;background-repeat: no-repeat;">
+  <div>
+    <h2 style="font-size:58px;">Testimonial</h2>
+    <p class="popins" style="font-size: 15px;font-weight: 300;text-align: center;">Home/testimonial</p>
+  </div>
+</section>
+
+
+
+
+<div class="testimonial-section">
+  <h2 class="heading popins">What Our Clients Say</h2>
+  <p class="subheading popins">Our Clients send us a bunch of smiles with our services <br> and we love them</p>
+
+  <!-- Profile pictures -->
+  <div class="profile-container">
+    <img src="https://kitnew.moxcreative.com/fleu/wp-content/uploads/sites/13/2022/11/img_3.png"
+      class="profile-image profile1" alt="Client Image 1">
+    <img src="https://kitnew.moxcreative.com/fleu/wp-content/uploads/sites/13/2022/11/img_3.png"
+      class="profile-image profile2" alt="Client Image 2">
+    <img src="https://kitnew.moxcreative.com/fleu/wp-content/uploads/sites/13/2022/11/img_3.png"
+      class="profile-image profile3" alt="Client Image 3">
+    <img src="https://kitnew.moxcreative.com/fleu/wp-content/uploads/sites/13/2022/11/img_3.png"
+      class="profile-image profile4" alt="Client Image 4">
+    <img src="https://kitnew.moxcreative.com/fleu/wp-content/uploads/sites/13/2022/11/img_3.png"
+      class="profile-image profile5" alt="Client Image 5">
+    <img src="https://kitnew.moxcreative.com/fleu/wp-content/uploads/sites/13/2022/11/img_3.png"
+      class="profile-image profile6" alt="Client Image 6">
+    <img src="https://kitnew.moxcreative.com/fleu/wp-content/uploads/sites/13/2022/11/img_3.png"
+      class="profile-image profile7" alt="Client Image 7">
+    <img src="https://kitnew.moxcreative.com/fleu/wp-content/uploads/sites/13/2022/11/img_3.png"
+      class="profile-image profile8" alt="Client Image 8">
+    <!-- Add more profile images as needed -->
+  </div>
+
+  <!-- Testimonial Card -->
+
+  <div style="width: 400px;margin: auto;margin-top: 50px;">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+      (afterChange)="checkCarouselPosition($event)">
+      <div class="testimonial-card slide" ngxSlickItem *ngFor="let slide of slides" class="">
+        <div style="align-items: center;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid #efeeee;
+        height: 100px;
+        width: 100px;
+        margin: auto;">
+          <img src="{{slide.img}}" class="" alt="Client Image 3" style="height: 70px;width: 70px;border-radius: 50%;">
+        </div>
+        <!-- <img src="../../../assets/images/topquote.jpeg" alt=""> -->
+        <p class="testimonial-text popins">
+          {{slide.m1}}
+        </p>
+        <p class="client-name">{{slide.name}}</p>
+        <div class="star-rating">
+          <i class="fi fi-ss-star"></i>
+          <i class="fi fi-ss-star"></i>
+          <i class="fi fi-ss-star"></i>
+          <i class="fi fi-ss-star"></i>
+          <i class="fi fi-ts-star-sharp-half-stroke"></i>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+  </div>
+
+  <div class="slick-btn">
+    <div class="btn" (click)="slickPrev()" [class.disabled]="isAtStart">
+      <i class="fi fi-rr-arrow-small-left"></i>
+    </div>
+    <div class="btn" (click)="slickNext()" [class.disabled]="isAtEnd" >
+      <i class="fi fi-rr-arrow-small-right"></i>
+    </div>
+  </div>
+
+</div>
+
+<!-- <div class="testimonial-container">
+  <div class="testimonial-card" *ngFor="let card of testimonialCards">
+    <div class="testimonial-content">
+      <blockquote>{{ card.quote }}</blockquote>
+      <div class="profile">
+        <img [src]="card.imageUrl" alt="{{ card.name }}">
+        <h3>{{ card.name }}</h3>
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+    </div>
+    <div class="wave" [ngClass]="card.waveColor"></div>
+  </div>
+</div> -->
