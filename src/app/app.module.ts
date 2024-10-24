@@ -16,6 +16,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgxMasonryModule } from 'ngx-masonry';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { NgxMasonryModule } from 'ngx-masonry';
     SlickCarouselModule,
     NgxMasonryModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
