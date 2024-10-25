@@ -1,5 +1,31 @@
 <app-header></app-header>
-<section style="overflow-x: hidden;">
+<section class="no-scroll" style="overflow-x: hidden;">
     <router-outlet></router-outlet>
 </section>
 <app-footer></app-footer>
+
+<div class="animated-img" style="position: fixed;bottom:0%;right: -7%;" (click)="toggleBot()">
+    <img src="../assets/images/chatbot2.png" alt="" style="width: 80px;mix-blend-mode: darken;cursor: pointer;">
+</div>
+
+<div class="chat-bot" [ngClass]="{'open': isBotOpen, 'hidden': !isBotOpen}">
+    <video src="../assets/videos/chatbotrocket.mp4" loop autoplay muted playsinline preload="auto">
+    </video>
+
+    <img src="../assets/images/chatbotlogo2.png" alt="" style="width: 150px;bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);position: absolute;">
+
+    <h3 class="popins" style="color: #fff;text-wrap: balance;text-align: center;bottom: 25%;
+    right: 50%;
+    transform: translate(50%, 50%);position: absolute;font-size: 24px;line-height: 35px;">Your Personal Ai Chat Bot
+    </h3>
+    <h3 class="popins" style="color:#fff;top: 25%;
+    right: 50%;
+    transform: translate(50%, 50%);position: absolute;font-size: 20px;">Chat with Ai Bot</h3>
+    <div style="height: 60px;width: 60px;border: 2px solid #fff;border-radius: 50%;bottom: 10%;
+    right: 50%;
+    transform: translate(50%, 50%);position: absolute;display: flex;align-items: center;justify-content: center;">
+        <i class="fi fi-rr-arrow-right" style="color: #fff;display: flex;"></i>
+    </div>
+</div>

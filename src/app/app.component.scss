@@ -1,0 +1,44 @@
+
+.chat-bot {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #000000;
+    position: fixed;
+    bottom: 5%;
+    right: 7%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.chat-bot.open {
+    height: 600px;
+    width: 375px;
+    border-radius: 8px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media(max-width:768px) {
+    .chat-bot {
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+
+    .chat-bot.open {
+        bottom: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+
+    .animated-img {
+        z-index: 99999;
+        right: -30% !important;
+    }
+}
